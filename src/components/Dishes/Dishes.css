@@ -22,10 +22,11 @@
     cursor: pointer;
     border: none;
     border-radius: 10px;
+    transition: transform 0.3s;
 }
 
 .dish:hover {
-    transition: 0.3s;
+    transform: translateY(-5px);
     background: #e8e8e8;
 }
 
