@@ -1,0 +1,8 @@
+.orderSide {
+    border: 1px solid black;
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 13px;
+    text-align: center;
+}
