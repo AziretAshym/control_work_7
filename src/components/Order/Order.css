@@ -6,3 +6,25 @@
     border-radius: 13px;
     text-align: center;
 }
+
+.oneOrder {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    align-items: center;
+    text-align: center;
+    background: #e8e8e8;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.orderLeftSide {
+    display: flex;
+    justify-content: space-around;
+}
+
+.deleteBtn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
