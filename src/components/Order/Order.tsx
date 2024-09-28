@@ -6,9 +6,10 @@ import deleteBnt from '../../assets/delete-button.png';
 interface Props {
     dishes: IDishes[];
     removeDish: (title:string) => void;
+    removeAllDishes: () => void;
 }
 
-const Order = ({ dishes, removeDish }: Props) => {
+const Order = ({ dishes, removeDish, removeAllDishes }: Props) => {
     const totalOrderPrice = dishes.reduce((acc, dish) => acc + (dish.count * dish.price), 0);
     const totalItemsCount = dishes.reduce((acc, dish) => acc + dish.count, 0);
 
@@ -36,6 +37,7 @@ const Order = ({ dishes, removeDish }: Props) => {
                         return null;
                     })}
                     <h3>Total Price: <strong>{totalOrderPrice}</strong></h3>
+                    <button type={'button'} onClick={removeAllDishes} className={'removeAllDishes'}>Clear cart</button>
                 </>
             ) : (
                 <p>Order is empty <br/>Please add some items</p>

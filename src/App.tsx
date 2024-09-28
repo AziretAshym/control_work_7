@@ -42,9 +42,15 @@ const App = () => {
         );
     };
 
+    const removeAllDishes = () => {
+        setDishes(prevState =>
+            prevState.map(dish => ({...dish, count: 0}))
+        );
+    };
+
     return (
         <div className={'container'}>
-            <Order dishes={dishes} removeDish={removeDish}/>
+            <Order dishes={dishes} removeDish={removeDish} removeAllDishes={removeAllDishes}/>
             <Dishes dishes={dishes} addDish={addDish}/>
 
         </div>
